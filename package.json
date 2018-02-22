@@ -4,7 +4,9 @@
   "description": "React Native wrapper for native iOS Facebook SDK login button and manager",
   "main": "FBLogin.ios.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -28,5 +30,9 @@
   "homepage": "https://github.com/magus/react-native-facebook-login",
   "peerDependencies": {
     "react-native": "0.15.0-rc || >=0.14.2"
+  },
+  "snyk": true,
+  "dependencies": {
+    "snyk": "^1.69.7"
   }
 }
