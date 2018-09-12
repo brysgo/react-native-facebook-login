@@ -3,10 +3,14 @@
   "version": "0.0.3",
   "private": true,
   "scripts": {
-    "start": "node_modules/react-native/packager/packager.sh --assetRoots=./iOS/Images.xcassets"
+    "start": "node_modules/react-native/packager/packager.sh --assetRoots=./iOS/Images.xcassets",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "react-native": ">=0.14.2",
-    "react-native-facebook-login": "file:../"
-  }
+    "react-native-facebook-login": "file:../",
+    "snyk": "^1.95.3"
+  },
+  "snyk": true
 }
